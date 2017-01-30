@@ -1,0 +1,1 @@
+# openprocurement.schemas.dgf

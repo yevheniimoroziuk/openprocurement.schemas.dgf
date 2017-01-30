@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Schema for buildings 0412",
+    "additionalProperties": false,
+    "required": [
+        "number_of_rooms",
+        "total_area",
+        "number_of_kitchen"
+    ],
+    "properties": {
+        "number_of_kitchen": {
+            "type": "integer",
+            "title": "Кількість кухонь",
+            "minimum": 0,
+            "description": "Загальна кількість кухонь"
+        },
+        "number_of_rooms": {
+            "$ref": "../schema_001.json#/properties/number_of_rooms"
+        },
+        "total_area": {
+            "$ref": "../schema_001.json#/properties/total_area"
+        }
+    },
+    "id": "file:///Users/serbokryl/work/schemas_store/schemas_store/schemas/04/1/2/schema_001.json"
+}

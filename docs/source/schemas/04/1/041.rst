@@ -1,0 +1,23 @@
+
+
+======================
+Schema 041
+======================
+
+Main page :ref:`schemas`
+
+
+
+
+version 001
+-----------
+
+.. raw:: html
+
+    <script src="../../../_static/docson/widget.js"
+        data-schema="../../schemas/04/1/schema_001.json">
+    </script>
+
+
+
+

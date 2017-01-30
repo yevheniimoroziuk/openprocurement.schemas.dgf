@@ -1,0 +1,18 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Schema for all buildings",
+    "additionalProperties": false,
+    "required": [
+        "total_area"
+    ],
+    "properties": {
+        "total_area": {
+            "type": "integer",
+            "title": "Загальна площа",
+            "minimum": 0,
+            "description": "загальна площа яку займає будівля"
+        }
+    },
+    "id": "file:///Users/serbokryl/work/schemas_store/schemas_store/schemas/04/schema_001.json"
+}

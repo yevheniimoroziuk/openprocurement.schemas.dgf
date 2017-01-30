@@ -11,10 +11,7 @@ Contents:
    :maxdepth: 2
 
    readme
-   installation
    usage
-   contributing
-   authorshistory
    schemas
 
 Indices and tables

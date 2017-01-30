@@ -1,0 +1,29 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Schema for buildings 04122 1",
+    "additionalProperties": false,
+    "required": [
+        "number_of_kitchen",
+        "total_area",
+        "number_of_rooms",
+        "living_space"
+    ],
+    "properties": {
+        "living_space": {
+            "type": "integer",
+            "title": "Житлова площа",
+            "minimum": 0
+        },
+        "number_of_kitchen": {
+            "$ref": "../schema_001.json#/properties/number_of_kitchen"
+        },
+        "number_of_rooms": {
+            "$ref": "../schema_001.json#/properties/number_of_rooms"
+        },
+        "total_area": {
+            "$ref": "../schema_001.json#/properties/total_area"
+        }
+    },
+    "id": "file:///Users/serbokryl/work/schemas_store/schemas_store/schemas/04/1/2/2/schema_001.json"
+}

@@ -1,0 +1,175 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openprocurement.schemas.dgf 1.0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-16 14:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Serbokryl Oleg <chezar1995@gmail.com>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/create_new_schema.rst:6
+msgid "Create new schema"
+msgstr "Створення нової схеми"
+
+#: ../../source/create_new_schema.rst:9
+msgid ""
+"For creating new schema first create template on `SchemaOnline "
+"<http://jsonschema.net/>`_."
+msgstr ""
+"Для нової схеми потрібно створити шаблон `SchemaOnline "
+"<http://jsonschema.net/>`_."
+
+#: ../../source/create_new_schema.rst:13
+msgid "Example setup for service."
+msgstr "Приклад налаштування сервісу"
+
+#: ../../source/create_new_schema.rst:19
+msgid "Create schema."
+msgstr "Створити схему"
+
+#: ../../source/create_new_schema.rst:21
+msgid ""
+"Pattern for new schema 06******-*, it's means that all items with CAV "
+"classification which start with 06 and have't more specific schema will use "
+"it."
+msgstr ""
+"Патерн для нової схеми 06******-*, отже всі items, які матимуть CAV "
+"класифікатор которий починається з 06, будуть використовувати схему."
+
+#: ../../source/create_new_schema.rst:24
+msgid "Fields for new schema:"
+msgstr "Поля для нової схеми, з можливими даними:"
+
+#: ../../source/create_new_schema.rst:26
+msgid "Region = Kiev"
+msgstr "Region = Kiev"
+
+#: ../../source/create_new_schema.rst:27
+msgid "City = Kiev"
+msgstr "City = Kiev"
+
+#: ../../source/create_new_schema.rst:28
+msgid "Availability_owners = True/False"
+msgstr "Availability_owners = True/False"
+
+#: ../../source/create_new_schema.rst:31
+msgid "So, open service and write your fields, and then get template."
+msgstr "Відкриємо сервіс та опишемо наші поля у json."
+
+#: ../../source/create_new_schema.rst:36
+msgid ""
+"Generate schema template and save it in file, with name `schema_XXX.json` "
+"where XXX - is number of version."
+msgstr ""
+"Створемо шаблон схеми, та збережемо його в файлі з назвою `schema_XXX.json`,"
+" де XXX - це номер версії схеми."
+
+#: ../../source/create_new_schema.rst:80
+msgid ""
+"Edit template which we create before. Open file with schema and edit fields "
+"`title`, and `description`."
+msgstr ""
+"Відреагуємо шаблон, який був створений на попередньому етапі. Поля, які "
+"потрібно відредагувати `title` и `description`"
+
+#: ../../source/create_new_schema.rst:84
+msgid "Validation"
+msgstr "Валідація"
+
+#: ../../source/create_new_schema.rst:86
+msgid ""
+"For every field we can add basic validation, like `maxlength` -  max length "
+"for text field or `minlength`. For more validation you can read `this <http"
+"://json-schema.org/latest/json-schema-validation.html#rfc.section.5/>`_."
+msgstr ""
+"Для кожного поля є можливість додати валідацію, наприклад `maxlength` -  "
+"встановлення максимальної довжини рядка. Перелік можливої валідації можно "
+"знайти в `документації  <http://json-schema.org/latest/json-schema-"
+"validation.html#rfc.section.5/>`_."
+
+#: ../../source/create_new_schema.rst:90
+msgid "Change ID for schema"
+msgstr "Редагування ID для схеми."
+
+#: ../../source/create_new_schema.rst:92
+msgid ""
+"For editing main ID in schema get real number from schema pattern and then "
+"insert after every number '/', exception is only first two symbols."
+msgstr ""
+"Для редагування ID схеми, потрібно розділи номер схеми, починаючи з другого,"
+" символом `/`."
+
+#: ../../source/create_new_schema.rst:94
+msgid "**001** - Number schema version, set real number."
+msgstr "**001** - Номер версії схеми."
+
+#: ../../source/create_new_schema.rst:96
+msgid "Examples:"
+msgstr "Приклади:"
+
+#: ../../source/create_new_schema.rst:99
+msgid "Schema ID"
+msgstr "ID Схеми"
+
+#: ../../source/create_new_schema.rst:101
+msgid "06******-*"
+msgstr "06******-*"
+
+#: ../../source/create_new_schema.rst:101
+msgid "file:///schemas/06/schema_001.json"
+msgstr "file:///schemas/06/schema_001.json"
+
+#: ../../source/create_new_schema.rst:102
+msgid "061*****-*"
+msgstr "061*****-*"
+
+#: ../../source/create_new_schema.rst:102
+msgid "file:///schemas/06/1/schema_001.json"
+msgstr "file:///schemas/06/1/schema_001.json"
+
+#: ../../source/create_new_schema.rst:103
+msgid "0613****-*"
+msgstr "0613****-*"
+
+#: ../../source/create_new_schema.rst:103
+msgid "file:///schemas/06/1/3/schema_001.json"
+msgstr "file:///schemas/06/1/3/schema_001.json"
+
+#: ../../source/create_new_schema.rst:108
+msgid "Relative schema fields"
+msgstr "Успадковані поля схеми"
+
+#: ../../source/create_new_schema.rst:114
+msgid "schemas/06/schema_001.json"
+msgstr "schemas/06/schema_001.json"
+
+#: ../../source/create_new_schema.rst:99
+msgid "Pattern"
+msgstr "Шаблон"
+
+#: ../../source/create_new_schema.rst:78
+msgid "Edit schema template"
+msgstr "Редагувати шаблон схеми"
+
+#: ../../source/create_new_schema.rst:110
+msgid ""
+"Example you have schema by pattern 06******-*, and want create for "
+"061*****-*. They both have common fields `region`, `city`, "
+"`availability_owners` in our case."
+msgstr ""
+"Наприклад маємо схему за патерном 06******-*, та хочемо створити "
+"061*****-*.Вони мають спільні поля `region`, `city`, та "
+"`availability_owners`."
+
+#: ../../source/create_new_schema.rst:152
+msgid ""
+"Create schema 061*****-* but specify only one field `ownership_of_land`, the"
+" rest import from parent schema schemas/06/schema_001.json"
+msgstr ""
+"Створемо схему 061*****-*, опишемо поле `ownership_of_land`, інші  "
+"наслідуємо з батьківської схеми."
+

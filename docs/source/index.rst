@@ -13,6 +13,7 @@ Contents:
    readme
    usage
    schemas
+   create_new_schema
 
 Indices and tables
 ==================

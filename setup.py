@@ -28,6 +28,7 @@ test_requires = requires + [
 
 docs_requires = requires + [
     'sphinxcontrib-httpdomain',
+    'sphinx_rtd_theme',
 ]
 
 

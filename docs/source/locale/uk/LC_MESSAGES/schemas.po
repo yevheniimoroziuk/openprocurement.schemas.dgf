@@ -1,0 +1,52 @@
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: openprocurement.schemas.dgf 1.0.7\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-02-16 14:22+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../source/schemas.rst:8
+msgid "Schemas"
+msgstr ""
+
+#: ../../source/schemas.rst:10
+msgid "All schemas:"
+msgstr ""
+
+#: ../../source/schemas/04/04.rst:5
+msgid "Schema 04"
+msgstr ""
+
+#: ../../source/schemas/04/04.rst:7 ../../source/schemas/04/1/041.rst:7
+#: ../../source/schemas/04/1/2/0412.rst:7
+#: ../../source/schemas/04/1/2/2/04122.rst:7
+msgid "Main page :ref:`schemas`"
+msgstr ""
+
+#: ../../source/schemas/04/04.rst:13 ../../source/schemas/04/1/041.rst:13
+#: ../../source/schemas/04/1/2/0412.rst:13
+#: ../../source/schemas/04/1/2/2/04122.rst:13
+msgid "version 001"
+msgstr ""
+
+#: ../../source/schemas/04/1/041.rst:5
+msgid "Schema 041"
+msgstr ""
+
+#: ../../source/schemas/04/1/2/0412.rst:5
+msgid "Schema 0412"
+msgstr ""
+
+#: ../../source/schemas/04/1/2/2/04122.rst:5
+msgid "Schema 04122"
+msgstr ""
+
+#: ../../source/schemas/04/1/2/2/04122.rst:24
+msgid "version 002"
+msgstr ""

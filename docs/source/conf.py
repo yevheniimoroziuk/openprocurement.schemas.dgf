@@ -262,6 +262,8 @@ texinfo_documents = [
      'Miscellaneous'),
 ]
 
+locale_dirs = ['locale/']   # path is example but recommended.
+
 # Documents to append as an appendix to all manuals.
 #texinfo_appendices = []
 

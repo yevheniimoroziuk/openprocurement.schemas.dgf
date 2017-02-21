@@ -11,9 +11,9 @@ Contents:
    :maxdepth: 2
 
    readme
-   usage
    schemas
    create_new_schema
+   create_06_schema
 
 Indices and tables
 ==================

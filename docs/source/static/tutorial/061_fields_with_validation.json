@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "file:///schemas/06/1/schema_001.json",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "region": {
+      "$ref": "../schema_001.json#/properties/region"
+    },
+    "district": {
+      "$ref": "../schema_001.json#/properties/district"
+    },
+    "cadastral_number": {
+      "$ref": "../schema_001.json#/properties/cadastral_number"
+    },
+    "area": {
+      "$ref": "../schema_001.json#/properties/area"
+    },
+    "forms_of_land_ownership": {
+      "$ref": "../schema_001.json#/properties/forms_of_land_ownership"
+    },
+    "co_owners": {
+      "$ref": "../schema_001.json#/properties/co_owners"
+    },
+    "availability_of_utilities": {
+      "$ref": "../schema_001.json#/properties/availability_of_utilities"
+    },
+    "current_use": {
+      "$ref": "../schema_001.json#/properties/current_use"
+    },
+    "city": {
+      "title": "Місто/Населений пункт",
+      "type": "string"
+    }
+  },
+  "required": [
+    "region",
+    "district",
+    "cadastral_number",
+    "area",
+    "forms_of_land_ownership",
+    "co_owners",
+    "availability_of_utilities",
+    "current_use",
+    "city"
+  ]
+}

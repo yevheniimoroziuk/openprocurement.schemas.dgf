@@ -1,0 +1,39 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "region": {
+      "type": "string"
+    },
+    "district": {
+      "type": "string"
+    },
+    "cadastral_number": {
+      "type": "string"
+    },
+    "area": {
+      "type": "integer"
+    },
+    "forms_of_land_ownership": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "co_owners": {
+      "type": "boolean"
+    },
+    "availability_of_utilities": {
+      "type": "boolean"
+    }
+  },
+  "required": [
+    "region",
+    "district",
+    "cadastral_number",
+    "area",
+    "forms_of_land_ownership",
+    "co_owners",
+    "availability_of_utilities"
+  ]
+}

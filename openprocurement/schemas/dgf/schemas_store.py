@@ -4,7 +4,7 @@ import io
 import json
 from re import compile
 from collections import namedtuple
-from jsonschema import Draft4Validator
+from jsonschema import Draft4Validator, RefResolver
 from jsonschema.exceptions import ValidationError
 
 from ._tree import Tree
@@ -25,13 +25,14 @@ class SchemaStore(object):
     root = None
     error_massage_cannot_find = "Can't find schema by version {version}"
 
+    _store = {}
+
     import_exception = (NotFoundSchema, )
     validation_exception = (ValidationError, )
 
     def __init__(self, path=None):
         """ Init path and update schema(IO operation) """
         self.path = path if path else get_default_schema()
-        self.update_schemas_id(self.path)
 
     def load(self):
         """ Create root """
@@ -151,8 +152,12 @@ class SchemaStore(object):
                              encoding='utf-8') as f:
                     schema_json = json.load(f)
                     reg_group = VERSION_RE.search(elem_name).groupdict()
+                    self._store[schema_json['id']] = schema_json
+                    resolver = RefResolver(schema_json['id'], schema_json)
+                    resolver.store = self._store
                     tree.versions[reg_group['version']] = Draft4Validator(
-                        schema_json
+                        schema_json,
+                        resolver=resolver
                     )
             else:
                 if os.path.isdir(os.path.join(path, elem_name)):
@@ -178,26 +183,3 @@ class SchemaStore(object):
                     handler_path(new_path,
                                  self.update_file,
                                  self._go_by_schema)
-
-    def update_schemas_id(self, path):
-        """
-        Update every schemas id
-        :param path: os.path
-        """
-        self._go_by_schema(path, self.update_file, self._go_by_schema)
-
-    def update_file(self, file_path):
-        """
-        Update schema id
-        :param file_path: os.path
-        """
-        file_path_template = "file://{package}{schema}"
-        with io.open(file_path, mode='r+', encoding='utf-8') as f:
-            schema_json = json.load(f)
-            schema_json['id'] = file_path_template.format(
-                package=self.path,
-                schema=schema_json['id'].split('schemas')[-1])
-            f.seek(0)
-            f.truncate()
-            f.write(json.dumps(schema_json, indent=4,
-                               separators=(',', ': '), ensure_ascii=False))

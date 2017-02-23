@@ -1,7 +1,7 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "title": "Schema for buildings 0412",
+    "title": "Schema for buildings 0411",
     "additionalProperties": false,
     "required": [
         "number_of_rooms",
@@ -16,11 +16,11 @@
             "description": "Загальна кількість кухонь"
         },
         "number_of_rooms": {
-            "$ref": "../schema_001.json#/properties/number_of_rooms"
+            "$ref": "urn:cav:04100000-9.001#/properties/number_of_rooms"
         },
         "total_area": {
-            "$ref": "../schema_001.json#/properties/total_area"
+            "$ref": "urn:cav:04100000-9.001#/properties/total_area"
         }
     },
-    "id": "file:///Users/serbokryl/work/schemas_store/schemas_store/schemas/04/1/2/schema_001.json"
+    "id": "urn:cav:04110000-6.001"
 }

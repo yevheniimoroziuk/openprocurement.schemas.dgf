@@ -15,8 +15,8 @@
             "description": "Загальна кількість кімнат"
         },
         "total_area": {
-            "$ref": "../schema_001.json#/properties/total_area"
+            "$ref": "urn:cav:04000000-8.001#/properties/total_area"
         }
     },
-    "id": "file:///Users/serbokryl/work/schemas_store/schemas_store/schemas/04/1/schema.json"
+    "id": "urn:cav:04100000-9.001"
 }

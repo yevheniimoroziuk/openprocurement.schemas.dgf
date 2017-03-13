@@ -1,0 +1,47 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "urn:cav:06100000-0.001",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "region": {
+      "$ref": "urn:cav:06000000-0.001#/properties/region"
+    },
+    "district": {
+      "$ref": "urn:cav:06000000-0.001#/properties/district"
+    },
+    "cadastral_number": {
+      "$ref": "urn:cav:06000000-0.001#/properties/cadastral_number"
+    },
+    "area": {
+      "$ref": "urn:cav:06000000-0.001#/properties/area"
+    },
+    "forms_of_land_ownership": {
+      "$ref": "urn:cav:06000000-0.001#/properties/forms_of_land_ownership"
+    },
+    "co_owners": {
+      "$ref": "urn:cav:06000000-0.001#/properties/co_owners"
+    },
+    "availability_of_utilities": {
+      "$ref": "urn:cav:06000000-0.001#/properties/availability_of_utilities"
+    },
+    "current_use": {
+      "$ref": "urn:cav:06000000-0.001#/properties/current_use"
+    },
+    "city": {
+      "title": "Місто/Населений пункт",
+      "type": "string"
+    }
+  },
+  "required": [
+    "region",
+    "district",
+    "cadastral_number",
+    "area",
+    "forms_of_land_ownership",
+    "co_owners",
+    "availability_of_utilities",
+    "current_use",
+    "city"
+  ]
+}

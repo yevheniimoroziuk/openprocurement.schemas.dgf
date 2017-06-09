@@ -4,7 +4,7 @@ import io
 import json
 from re import compile
 from collections import namedtuple
-from jsonschema import Draft4Validator, RefResolver
+from jsonschema import Draft4Validator
 from jsonschema.exceptions import ValidationError
 
 from ._tree import Tree
@@ -24,8 +24,6 @@ class SchemaStore(object):
     schema_tuple = namedtuple('schema', ['code', 'version', 'schema'])
     root = None
     error_massage_cannot_find = "Can't find schema by version {version}"
-
-    _store = {}
 
     import_exception = (NotFoundSchema, )
     validation_exception = (ValidationError, )
@@ -152,12 +150,8 @@ class SchemaStore(object):
                              encoding='utf-8') as f:
                     schema_json = json.load(f)
                     reg_group = VERSION_RE.search(elem_name).groupdict()
-                    self._store[schema_json['id']] = schema_json
-                    resolver = RefResolver(schema_json['id'], schema_json)
-                    resolver.store = self._store
                     tree.versions[reg_group['version']] = Draft4Validator(
-                        schema_json,
-                        resolver=resolver
+                        schema_json
                     )
             else:
                 if os.path.isdir(os.path.join(path, elem_name)):

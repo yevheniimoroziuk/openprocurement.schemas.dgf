@@ -1,0 +1,23 @@
+
+
+======================
+Schema 06
+======================
+
+Main page :ref:`schemas`
+
+
+
+
+version 001
+-----------
+
+.. raw:: html
+
+    <script src="/home/leits/ea_openprocurement.buildout/src/openprocurement.schemas.dgf/docs/source/static/docson/widget.js"
+        data-schema="/home/leits/ea_openprocurement.buildout/src/openprocurement.schemas.dgf/openprocurement/schemas/dgf/schemas/06/schema_001.json">
+    </script>
+
+
+
+

@@ -1,32 +1,50 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "urn:cav:06120000-0.001",
+  "id": "urn:cav:06120000-9.001",
+  "title": "Землі з іншим призначенням",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "region": {
-      "$ref": "urn:cav:06100000-0.001#/properties/region"
+      "title": "Область",
+      "type": "string"
     },
     "district": {
-      "$ref": "urn:cav:06100000-0.001#/properties/district"
+      "type": "string",
+      "title": "Район"
     },
     "cadastral_number": {
-      "$ref": "urn:cav:06100000-0.001#/properties/cadastral_number"
+      "title": "Кадастровий номер",
+      "type": "string"
     },
     "area": {
-      "$ref": "urn:cav:06100000-0.001#/properties/area"
+      "title": "Площа, кв.м/га",
+      "type": "integer",
+      "minimum": 1,
+      "exclusiveMinimum": false
     },
     "forms_of_land_ownership": {
-      "$ref": "urn:cav:06100000-0.001#/properties/forms_of_land_ownership"
+      "type": "array",
+      "title": "Форми власності на землю.",
+      "items": {
+        "type": "string",
+        "enum": ["державна", "приватна", "комунальна"]
+      }
     },
     "co_owners": {
-      "$ref": "urn:cav:06100000-0.001#/properties/co_owners"
+      "title": "Наявність співвласників",
+      "type": "boolean",
+      "default": false
     },
     "availability_of_utilities": {
-      "$ref": "urn:cav:06100000-0.001#/properties/availability_of_utilities"
+      "title": "Наявність на ділянці інженерних мереж",
+      "type": "boolean",
+      "default": true
     },
     "current_use": {
-      "$ref": "urn:cav:06100000-0.001#/properties/current_use"
+      "title": "Поточне використання ",
+      "type": "boolean",
+      "default": true
     },
     "land_ownership": {
       "title": "Суб'єкт права  власності на землю",

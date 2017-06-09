@@ -1,7 +1,7 @@
 
 
 ======================
-Schema 041
+Schema 061
 ======================
 
 Main page :ref:`schemas`
@@ -15,7 +15,7 @@ version 001
 .. raw:: html
 
     <script src="../../../_static/docson/widget.js"
-        data-schema="../../schemas/04/1/schema_001.json">
+        data-schema="../../schemas/06/1/schema_001.json">
     </script>
 
 

@@ -23,7 +23,7 @@ test_requires = requires + [
     'Sphinx == 1.4.8',
     'schematics',
     'jsonschema',
-    'mock'
+    'mock == 1'
 ]
 
 docs_requires = requires + [

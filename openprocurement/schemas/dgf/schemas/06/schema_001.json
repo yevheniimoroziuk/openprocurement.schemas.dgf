@@ -1,6 +1,7 @@
 {
-  "id": "urn:cav:06000000-0.001",
   "$schema": "http://json-schema.org/draft-04/schema#",
+  "id": "urn:cav:06000000-2.001",
+  "title": "Земельні ділянки",
   "type": "object",
   "additionalProperties": false,
   "properties": {

@@ -35,3 +35,4 @@ waitress==0.8.9
 zope.deprecation==4.1.1
 zope.interface==4.1.1
 sphinx-rtd-theme==0.1.9
+sphinx-jsonschema==1.3

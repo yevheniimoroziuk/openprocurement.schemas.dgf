@@ -8,6 +8,7 @@ from re import compile
 
 SCHEMA_PATH = compile(r'dgf/schemas/(?P<path>[a-zA-Z0-9_/]+)$')
 VERSION_RE = compile(r'schema_(?P<version>\d+).json')
+DIR_PATH = os.path.dirname(os.path.realpath(__file__))
 
 """
 
@@ -15,7 +16,7 @@ Create tree for json schema in docs
 
 """
 
-main_schema_template = """
+main_schema_template = u"""
 .. index:: Schemas
 
 .. _Schemas:
@@ -33,7 +34,7 @@ All schemas:
 
 """
 
-schemas_rst_template = """
+schemas_rst_template = u"""
 
 ======================
 Schema {schema_number}
@@ -47,28 +48,28 @@ Main page :ref:`schemas`
 
 """
 
-schema_template = """
+schema_template = u"""
 
 version {version}
 -----------
 
-.. raw:: html
+.. jsonschema:: {dir_path}/openprocurement/schemas/dgf/schemas/{schema_path}/{file}
 
-    <script src="../{static_path}_static/docson/widget.js"
-        data-schema="../../schemas/{schema_path}/{file}">
-    </script>
 
+`Schema {schema_number}`_
+
+.. _`Schema {schema_number}`: {dir_path}/openprocurement/schemas/dgf/schemas/{schema_path}/{file}
 """
 
 
 def create_doc_file(path, file_name, rst):
     with io.open(os.path.join(path, file_name), 'w') as f:
         f.write(schemas_rst_template.format(schema_number=file_name[:-4],
-                                            schemas="".join(rst)))
+                                            schemas=''.join(rst)))
 
 
 def create_dir(path):
-    """ Create directory bu path if it not exists """
+    """ Create directory by path if it not exists """
     if not os.path.exists(path):
         os.makedirs(path)
 
@@ -79,7 +80,7 @@ def create_doctree(path):
         if not SCHEMA_PATH.search(path):
             continue
         path = SCHEMA_PATH.search(path).groupdict()['path']
-        doctree.append("{}/{}".format(path, path.replace('/', '')))
+        doctree.append("schemas/{}/{}".format(path, path.replace('/', '')))
     return "\n   ".join(doctree)
 
 
@@ -89,8 +90,11 @@ def create_schemas_docs():
             continue
         path = SCHEMA_PATH.search(path).groupdict()['path']
         print("Find schemas in {path}".format(path=path))
+        schema_number = path.replace('/', '')
         rst = [schema_template.format(
                 file=file,
+                dir_path=DIR_PATH,
+                schema_number=schema_number,
                 schema_path=path,
                 static_path="../" * index,
                 version=VERSION_RE.search(file).groupdict()['version'])
@@ -98,7 +102,7 @@ def create_schemas_docs():
         path_for_docs = os.path.join(os.getcwd(), 'docs', 'source', 'schemas', path)
         create_dir(path_for_docs)
         create_doc_file(path_for_docs,
-                        "{name}.rst".format(name=path.replace('/', '')),
+                        "{schema_number}.rst".format(schema_number=schema_number),
                         rst)
 
     with io.open('./docs/source/schemas.rst', 'w') as f:

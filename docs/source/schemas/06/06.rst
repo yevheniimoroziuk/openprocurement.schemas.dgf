@@ -1,0 +1,23 @@
+
+
+======================
+Schema 06
+======================
+
+Main page :ref:`schemas`
+
+
+
+
+version 001
+-----------
+
+.. jsonschema:: ../../../../openprocurement/schemas/dgf/schemas/06/schema_001.json
+
+
+`Schema 06`_
+
+.. _`Schema 06`: ../../../../../openprocurement/schemas/dgf/schemas/06/schema_001.json
+
+
+

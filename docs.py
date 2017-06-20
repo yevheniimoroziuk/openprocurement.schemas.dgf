@@ -53,12 +53,12 @@ schema_template = u"""
 version {version}
 -----------
 
-.. jsonschema:: {dir_path}/openprocurement/schemas/dgf/schemas/{schema_path}/{file}
+.. jsonschema:: ../../../{static_path}openprocurement/schemas/dgf/schemas/{schema_path}/{file}
 
 
 `Schema {schema_number}`_
 
-.. _`Schema {schema_number}`: {dir_path}/openprocurement/schemas/dgf/schemas/{schema_path}/{file}
+.. _`Schema {schema_number}`: ../../../../{static_path}openprocurement/schemas/dgf/schemas/{schema_path}/{file}
 """
 
 

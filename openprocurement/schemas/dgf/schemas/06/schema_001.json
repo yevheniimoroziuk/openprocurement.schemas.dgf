@@ -40,11 +40,6 @@
       "title": "Наявність на ділянці інженерних мереж",
       "type": "boolean",
       "default": true
-    },
-    "current_use": {
-      "title": "Поточне використання ",
-      "type": "boolean",
-      "default": true
     }
   },
   "required": [
@@ -54,7 +49,6 @@
     "area",
     "forms_of_land_ownership",
     "co_owners",
-    "availability_of_utilities",
-    "current_use"
+    "availability_of_utilities"
   ]
 }

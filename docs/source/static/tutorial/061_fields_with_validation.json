@@ -1,32 +1,44 @@
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
-  "id": "file:///schemas/06/1/schema_001.json",
+  "id": "urn:cav:06100000-3.001",
   "type": "object",
   "additionalProperties": false,
   "properties": {
     "region": {
-      "$ref": "../schema_001.json#/properties/region"
+      "title": "Область",
+      "type": "string"
     },
     "district": {
-      "$ref": "../schema_001.json#/properties/district"
+      "type": "string",
+      "title": "Район"
     },
     "cadastral_number": {
-      "$ref": "../schema_001.json#/properties/cadastral_number"
+      "title": "Кадастровий номер",
+      "type": "string"
     },
     "area": {
-      "$ref": "../schema_001.json#/properties/area"
+      "title": "Площа, кв.м/га",
+      "type": "integer",
+      "minimum": 1,
+      "exclusiveMinimum": false
     },
     "forms_of_land_ownership": {
-      "$ref": "../schema_001.json#/properties/forms_of_land_ownership"
+      "type": "array",
+      "title": "Форми власності на землю.",
+      "items": {
+        "type": "string",
+        "enum": ["державна", "приватна", "комунальна"]
+      }
     },
     "co_owners": {
-      "$ref": "../schema_001.json#/properties/co_owners"
+      "title": "Наявність співвласників",
+      "type": "boolean",
+      "default": false
     },
     "availability_of_utilities": {
-      "$ref": "../schema_001.json#/properties/availability_of_utilities"
-    },
-    "current_use": {
-      "$ref": "../schema_001.json#/properties/current_use"
+      "title": "Наявність на ділянці інженерних мереж",
+      "type": "boolean",
+      "default": true
     },
     "city": {
       "title": "Місто/Населений пункт",
@@ -41,7 +53,6 @@
     "forms_of_land_ownership",
     "co_owners",
     "availability_of_utilities",
-    "current_use",
     "city"
   ]
 }

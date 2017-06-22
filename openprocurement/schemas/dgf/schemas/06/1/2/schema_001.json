@@ -41,11 +41,6 @@
       "type": "boolean",
       "default": true
     },
-    "current_use": {
-      "title": "Поточне використання ",
-      "type": "boolean",
-      "default": true
-    },
     "land_ownership": {
       "title": "Суб'єкт права  власності на землю",
       "type": "string"
@@ -59,7 +54,6 @@
     "forms_of_land_ownership",
     "co_owners",
     "availability_of_utilities",
-    "current_use",
     "land_ownership"
   ]
 }

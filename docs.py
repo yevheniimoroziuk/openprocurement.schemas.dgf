@@ -58,7 +58,7 @@ version {version}
 
 `Schema {schema_number}`_
 
-.. _`Schema {schema_number}`: ../../../../{static_path}openprocurement/schemas/dgf/schemas/{schema_path}/{file}
+.. _`Schema {schema_number}`: /{schema_path}/{file}
 """
 
 

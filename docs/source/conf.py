@@ -111,6 +111,9 @@ pygments_style = 'sphinx'
 # a list of builtin themes.
 html_theme = 'sphinx_rtd_theme'
 
+# Add any extra paths that contain custom files (such as robots.txt or
+# .htaccess) here, relative to this directory. These files are copied
+# directly to the root of the documentation.
 html_extra_path = ['../../openprocurement/schemas/dgf/schemas']
 
 # Theme options are theme-specific and customize the look and feel of a

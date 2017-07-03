@@ -17,7 +17,7 @@ version 001
 
 `Schema 0612`_
 
-.. _`Schema 0612`: ../../../../../../../openprocurement/schemas/dgf/schemas/06/1/2/schema_001.json
+.. _`Schema 0612`: /06/1/2/schema_001.json
 
 
 

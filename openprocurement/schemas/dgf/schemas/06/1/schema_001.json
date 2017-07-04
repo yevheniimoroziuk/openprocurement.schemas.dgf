@@ -41,6 +41,11 @@
       "type": "boolean",
       "default": true
     },
+    "current_use": {
+      "title": "Поточне використання ",
+      "type": "boolean",
+      "default": true
+    },
     "city": {
       "title": "Місто/Населений пункт",
       "type": "string"
@@ -54,6 +59,7 @@
     "forms_of_land_ownership",
     "co_owners",
     "availability_of_utilities",
+    "current_use",
     "city"
   ]
 }

@@ -55,10 +55,10 @@ version {version}
 
 .. jsonschema:: ../../../{static_path}openprocurement/schemas/dgf/schemas/{schema_path}/{file}
 
+In jsonschema format:
 
-`Schema {schema_number}`_
-
-.. _`Schema {schema_number}`: /{schema_path}/{file}
+.. include:: ../../../{static_path}openprocurement/schemas/dgf/schemas/{schema_path}/{file}
+    :code:
 """
 
 

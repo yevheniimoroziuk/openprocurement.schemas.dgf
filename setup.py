@@ -29,7 +29,7 @@ test_requires = requires + [
 docs_requires = requires + [
     'sphinxcontrib-httpdomain',
     'sphinx_rtd_theme',
-    'sphinx-jsonschema'
+    'sphinx-jsonschema==1.3'
 ]
 
 

@@ -14,10 +14,10 @@ version 001
 
 .. jsonschema:: ../../../../../../openprocurement/schemas/dgf/schemas/06/1/2/schema_001.json
 
+In jsonschema format:
 
-`Schema 0612`_
-
-.. _`Schema 0612`: /06/1/2/schema_001.json
+.. include:: ../../../../../../openprocurement/schemas/dgf/schemas/06/1/2/schema_001.json
+    :code:
 
 
 

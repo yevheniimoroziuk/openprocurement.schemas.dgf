@@ -1,0 +1,53 @@
+{
+    "definitions": {}, 
+    "$schema": "http://json-schema.org/draft-04/schema#", 
+    "id": "urn:cav:04000000-8.001", 
+    "title": "Нерухоме майно",
+    "type": "object", 
+    "properties": {
+      "totalArea": {
+        "type": "number", 
+        "title": "Загальна площа", 
+        "description": "Загальна площа будівлі, кв. метри"
+      }, 
+      "year": {
+        "type": "integer", 
+        "minimum":1000,
+        "maximum":9999,
+        "title": "Рік будівництва", 
+        "description": "Рік будівництва, YYYY"
+      }, 
+      "constructionTechnology": {
+        "type": "array",
+        "title": "Технологія будівництва", 
+        "description": "Технологія будівництва",
+        "items": {
+          "type": "string", 
+          "enum": ["монолітно-каркасний", "панельний", "утеплена панель", "цегляний", "інше"]
+                  }
+      }, 
+      "floor": {
+        "type": "integer", 
+        "title": "Поверх", 
+        "description": "Поверх"
+      }, 
+      "livingSpace": {
+        "type": "number", 
+        "title": "Житлова площа", 
+        "description": "Житлова площа, кв. метри"
+      }, 
+      "kitchenArea": {
+        "type": "number", 
+        "title": "Площа кухні", 
+        "description": "Площа кухні, кв. метри"
+      }, 
+      "landArea": {
+        "type": "number", 
+        "title": "Ділянка", 
+        "description": "Площа ділянки, сотка"
+      }
+    },
+    "required": [
+      "totalArea"
+    ]
+  }

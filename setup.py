@@ -5,19 +5,11 @@ version = '1.0.7'
 
 requires = [
     'setuptools',
-    'pip>=6.0.7',
-    'bumpversion==0.5.3',
-    'wheel==0.29.0',
-    'watchdog==0.8.3',
     'schematics',
     'jsonschema'
 ]
 
 test_requires = requires + [
-    'pip>=6.0.7',
-    'bumpversion==0.5.3',
-    'wheel==0.29.0',
-    'watchdog==0.8.3',
     'flake8==2.6.0',
     'coverage == 4.1',
     'Sphinx == 1.4.8',

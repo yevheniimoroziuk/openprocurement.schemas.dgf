@@ -26,24 +26,24 @@
         "type": "string",
         "oneOf": [
           {
-            "const": "monolithFrame",
-            "title": "Monolith frame"
+            "const": "monolithicFrame",
+            "title": "Монолітно-каркасний"
           },
           {
             "const": "panel",
-            "title": "Panel"
+            "title": "Панельний"
           },
           {
-            "const": "warmPanel",
-            "title": "Warm panel"
+            "const": "insulatedPanel",
+            "title": "Утеплена панель"
           },
           {
             "const": "brick",
-            "title": "Brick"
+            "title": "Цегляний"
           },
           {
             "const": "other",
-            "title": "Other"
+            "title": "Інше"
           }
         ]
       }

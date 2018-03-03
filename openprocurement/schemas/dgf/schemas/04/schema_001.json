@@ -8,6 +8,7 @@
       "totalArea": {
         "type": "number",
         "title": "Загальна площа",
+        "minimum": 0,
         "description": "Загальна площа будівлі, кв. метри"
       },
       "year": {
@@ -18,53 +19,36 @@
         "description": "Рік будівництва, YYYY"
       },
       "constructionTechnology": {
-      "type": "array",
-      "title": "Технології будівництва",
-      "description": "Технології будівництва",
-      "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "oneOf": [
-          {
-            "const": "monolithicFrame",
-            "title": "Монолітно-каркасний"
-          },
-          {
-            "const": "panel",
-            "title": "Панельний"
-          },
-          {
-            "const": "insulatedPanel",
-            "title": "Утеплена панель"
-          },
-          {
-            "const": "brick",
-            "title": "Цегляний"
-          },
-          {
-            "const": "other",
-            "title": "Інше"
-          }
-        ]
-      }
+        "type": "array",
+        "title": "Технологія будівництва",
+        "uniqueItems": true,
+        "description": "Технологія будівництва",
+        "items": {
+          "type": "string",
+          "enum": ["monolithicFrame", "panel", "insulatedPanel", "brick", "other"]
+        }
       },
       "floor": {
         "type": "integer",
         "title": "Поверх",
-        "description": "Поверх"
+        "description": "Поверх",
+        "minimum": 0
       },
       "livingArea": {
         "type": "number",
+        "minimum": 0,
         "title": "Житлова площа",
         "description": "Житлова площа, кв. метри"
       },
       "kitchenArea": {
         "type": "number",
+        "minimum": 0,
         "title": "Площа кухні",
         "description": "Площа кухні, кв. метри"
       },
       "landArea": {
         "type": "number",
+        "minimum": 0,
         "title": "Ділянка",
         "description": "Площа ділянки, сотка"
       }

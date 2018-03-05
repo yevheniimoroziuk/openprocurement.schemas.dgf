@@ -1,5 +1,6 @@
 {
     "definitions": {},
+    "additionalProperties": false,
     "id": "urn:cav:04000000-8.001",
     "title": "Нерухоме майно",
     "type": "object",

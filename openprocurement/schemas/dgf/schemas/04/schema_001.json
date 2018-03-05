@@ -1,6 +1,5 @@
 {
     "definitions": {},
-    "$schema": "http://json-schema.org/draft-07/schema#",
     "id": "urn:cav:04000000-8.001",
     "title": "Нерухоме майно",
     "type": "object",
@@ -8,6 +7,7 @@
       "totalArea": {
         "type": "number",
         "title": "Загальна площа",
+        "minimum": 0,
         "description": "Загальна площа будівлі, кв. метри"
       },
       "year": {
@@ -18,35 +18,14 @@
         "description": "Рік будівництва, YYYY"
       },
       "constructionTechnology": {
-      "type": "array",
-      "title": "Технології будівництва",
-      "description": "Технології будівництва",
-      "uniqueItems": true,
-      "items": {
-        "type": "string",
-        "oneOf": [
-          {
-            "const": "monolithicFrame",
-            "title": "Монолітно-каркасний"
-          },
-          {
-            "const": "panel",
-            "title": "Панельний"
-          },
-          {
-            "const": "insulatedPanel",
-            "title": "Утеплена панель"
-          },
-          {
-            "const": "brick",
-            "title": "Цегляний"
-          },
-          {
-            "const": "other",
-            "title": "Інше"
-          }
-        ]
-      }
+        "type": "array",
+        "title": "Технологія будівництва",
+        "uniqueItems": true,
+        "description": "Технологія будівництва",
+        "items": {
+          "type": "string",
+          "enum": ["monolithicFrame", "panel", "insulatedPanel", "brick", "other"]
+        }
       },
       "floor": {
         "type": "integer",
@@ -55,16 +34,19 @@
       },
       "livingArea": {
         "type": "number",
+        "minimum": 0,
         "title": "Житлова площа",
         "description": "Житлова площа, кв. метри"
       },
       "kitchenArea": {
         "type": "number",
+        "minimum": 0,
         "title": "Площа кухні",
         "description": "Площа кухні, кв. метри"
       },
       "landArea": {
         "type": "number",
+        "minimum": 0,
         "title": "Ділянка",
         "description": "Площа ділянки, сотка"
       }

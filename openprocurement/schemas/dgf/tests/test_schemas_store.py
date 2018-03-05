@@ -24,10 +24,21 @@ class TestSchemas_store(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_000_something(self):
+    def test_validation(self):
         store = SchemaStore()
         store.load()
         schema_tuple = store.get_schema(u'04000000-8', u'latest')
+
+        exc = None
+
+        test_properties = {}
+        try:
+            exc = None
+            schema_tuple.schema.validate(test_properties)
+        except ValidationError as e:
+            exc = e
+        self.assertNotEqual(exc, None)
+        self.assertEqual(e.message, '{} is a required property'.format("u'totalArea'"))
 
         test_properties = {u'totalArea': 200}
 
@@ -38,16 +49,15 @@ class TestSchemas_store(unittest.TestCase):
                 test_properties[u'constructionTechnology'] = list(ct)
                 schema_tuple.schema.validate(test_properties)
 
-        exc = None
 
         try:
-            test_properties[u'constructionTechnology'] = [u"wrong value"]
+            test_properties[u'constructionTechnology'] = [u"wrong_value"]
             schema_tuple.schema.validate(test_properties)
         except ValidationError as e:
             exc = e
         self.assertNotEqual(exc, None)
         self.assertEqual(exc.relative_path[0], u'constructionTechnology')
-        self.assertEqual(e.message, 'u\'{}\' is not one of {}'.format(u"wrong value", available_value))
+        self.assertEqual(e.message, 'u\'{}\' is not one of {}'.format(u"wrong_value", available_value))
 
         try:
             exc = None
@@ -71,7 +81,6 @@ class TestSchemas_store(unittest.TestCase):
         self.assertNotEqual(exc, None)
         self.assertEqual(exc.relative_path[0], u'totalArea')
         self.assertEqual(e.message, '{} is less than the minimum of 0'.format(test_properties[u'totalArea']))
-
 
         test_properties[u'totalArea'] = 0
         test_properties[u'livingArea'] = 0
@@ -117,11 +126,7 @@ class TestSchemas_store(unittest.TestCase):
         # Test if landArea less than 0
         test_properties[u'landArea'] = 0
         test_properties[u'floor'] = -200
-        try:
-            exc = None
-            schema_tuple.schema.validate(test_properties)
-        except ValidationError as e:
-            exc = e
-        self.assertNotEqual(exc, None)
-        self.assertEqual(exc.relative_path[0], u'floor')
-        self.assertEqual(e.message, '{} is less than the minimum of 0'.format(test_properties[u'floor']))
+        schema_tuple.schema.validate(test_properties)
+
+        test_properties[u'floor'] = 200
+        schema_tuple.schema.validate(test_properties)

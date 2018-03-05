@@ -1,6 +1,5 @@
 {
     "definitions": {},
-    "$schema": "http://json-schema.org/draft-07/schema#",
     "id": "urn:cav:04000000-8.001",
     "title": "Нерухоме майно",
     "type": "object",
@@ -31,8 +30,7 @@
       "floor": {
         "type": "integer",
         "title": "Поверх",
-        "description": "Поверх",
-        "minimum": 0
+        "description": "Поверх"
       },
       "livingArea": {
         "type": "number",

@@ -1,0 +1,70 @@
+{  
+   "definitions":{  },
+   "additionalProperties":false,
+   "id":"urn:cav:06000000-2.002",
+   "title":"Земельні ділянки",
+   "type":"object",
+   "properties":{  
+      "cadastralNumber":{  
+         "title":"Кадастровий номер",
+         "type":"string",
+         "pattern":"^\\d{10}:\\d{2}:\\d{3}:\\d{4}$",
+         "description":"Кадастровий номер земельної ділянки"
+      },
+      "area":{  
+         "title":"Площа",
+         "type":"number",
+         "minimum":0,
+         "description":"Площа ділянки, га"
+      },
+      "ownershipForm":{  
+         "type":"array",
+         "title":"Форми власності",
+         "uniqueItems":true,
+         "description":"Форми власності на земельну ділянку",
+         "items":{  
+            "type":"string",
+            "enum":[  
+               "state",
+               "private",
+               "municipal",
+               "unknown"
+            ]
+         }
+      },
+      "encumbrances":{  
+         "type":"array",
+         "title":"Наявність обтяжень",
+         "uniqueItems":true,
+         "description":"Інформація про наявність обтяжень на земельну ділянку",
+         "items":{  
+            "type":"string",
+            "enum":[  
+               "arrest",
+               "collateral",
+               "restraintsOnAlienation",
+               "otherEncumbrances",
+               "noEncumbrances"
+            ]
+         }
+      },
+      "jointOwnership":{  
+         "title":"Наявність співвласників",
+         "type":"boolean",
+         "description":"Наявність співвласників земельної ділянки"
+      },
+      "utilitiesAvailability":{  
+         "title":"Наявність інженерних мереж",
+         "type":"boolean",
+         "description":"Наявність на земельній ділянці інженерних мереж"
+      },
+      "inUse":{  
+         "title":"Поточне використання",
+         "description":"Чи використовується земельна ділянка в даний момент?",
+         "type":"boolean"
+      }
+   },
+   "required":[  
+      "area"
+   ]
+}

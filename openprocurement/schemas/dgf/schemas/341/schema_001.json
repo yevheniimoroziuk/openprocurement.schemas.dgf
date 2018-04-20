@@ -1,0 +1,84 @@
+{  
+   "definitions":{  },
+   "additionalProperties":false,
+   "id":"urn:cav:34100000-8.001",
+   "title":"Мототранспортні засоби",
+   "type":"object",
+   "properties":{  
+      "make":{  
+         "type":"string",
+         "title":"Марка",
+         "description":"Марка транспортного засобу"
+      },
+      "model":{  
+         "type":"string",
+         "title":"Модель",
+         "description":"Модель транспортного засобу"
+      },
+      "fuelType":{  
+         "type":"array",
+         "title":"Тип пального",
+         "description":"Тип пального транспортного засобу",
+         "uniqueItems":true,
+         "items":{  
+            "type":"string",
+            "enum":[  
+               "petrol",
+               "diesel",
+               "naturalGas",
+               "liquefiedPetroleumGas",
+               "electric",
+               "hybrid",
+               "other"
+            ]
+         }
+      },
+      "productionDate":{  
+         "type":"integer",
+         "minimum":1885,
+         "maximum":9999,
+         "title":"Рік випуску",
+         "description":"Рік випуску транспортного засобу, YYYY"
+      },
+      "odometer":{  
+         "type":"integer",
+         "minimum":0,
+         "title":"Пробіг",
+         "description":"Пробіг транспортного засобу, км"
+      },
+      "engineDisplacement":{  
+         "type":"number",
+         "minimum":0,
+         "title":"Об'єм двигуна",
+         "description":"Об'єм двигуна транспортного засобу, см. куб."
+      },
+      "vehicleIdentificationNumber":{  
+         "type":"string",
+         "title":"Номер кузову або шасі",
+         "description":"Номер кузову або шасі транспортного засобу"
+      },
+      "vehicleTransmission":{  
+         "type":"array",
+         "title":"Коробка передач",
+         "description":"Коробка передач транспортного засобу",
+         "uniqueItems":true,
+         "items":{  
+            "type":"string",
+            "enum":[  
+               "manual",
+               "automatic",
+               "semiAutomatic",
+               "other"
+            ]
+         }
+      },
+      "itemCondition":{  
+         "type":"string",
+         "title":"Технічний стан",
+         "description":"Технічний стан транспортного засобу"
+      }
+   },
+   "required":[  
+      "make"
+   ]
+}

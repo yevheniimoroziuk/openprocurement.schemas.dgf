@@ -133,6 +133,7 @@ class SchemaStore(object):
                 )
             else:
                 version_keys = list(branch.versions.keys())
+                version_keys.sort()
                 return self.schema_tuple(
                     code=branch.index,
                     version=version_keys[-1],

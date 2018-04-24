@@ -127,10 +127,15 @@ class SchemaStore(object):
                         schema=result.schema)
                 else:
                     return result
-            # if version != 'latest':
-            #     raise NotFoundSchema(
-            #         self.error_massage_cannot_find.format(version=version)
-            #     )
+            elif version in branch.versions:
+                return self.schema_tuple(
+                    code=branch.index,
+                    version=version,
+                    schema=branch.versions[version])
+            if version != 'latest':
+                raise NotFoundSchema(
+                    self.error_massage_cannot_find.format(version=version)
+                )
             else:
                 version_keys = list(branch.versions.keys())
                 version_keys.sort()

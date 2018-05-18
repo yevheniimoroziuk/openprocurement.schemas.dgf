@@ -10,18 +10,16 @@ requires = [
 ]
 
 test_requires = requires + [
-    'flake8==2.6.0',
-    'coverage == 4.1',
-    'Sphinx == 1.4.8',
-    'schematics',
-    'jsonschema',
-    'mock == 1'
+    'flake8',
+    'coverage',
+    'Sphinx',
+    'mock'
 ]
 
 docs_requires = requires + [
     'sphinxcontrib-httpdomain',
     'sphinx_rtd_theme',
-    'sphinx-jsonschema==1.3'
+    'sphinx-jsonschema'
 ]
 
 

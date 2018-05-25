@@ -19,5 +19,13 @@ In jsonschema format:
 .. include:: ../../../../openprocurement/schemas/dgf/schemas/06/schema_001.json
     :code:
 
+version 002
+-----------
 
+.. jsonschema:: ../../../../openprocurement/schemas/dgf/schemas/06/schema_002.json
+
+In jsonschema format:
+
+.. include:: ../../../../openprocurement/schemas/dgf/schemas/06/schema_002.json
+    :code:
 

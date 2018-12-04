@@ -1,0 +1,22 @@
+{
+	"definitions": {},
+	"additionalProperties": false,
+	"id": "urn:cav:34621100-7.001",
+	"title": "Вантажні залізничні вагони",
+	"type": "object",
+	"properties": {
+		"rollingStock": {
+			"type": "string",
+			"title": "Рухомий склад",
+			"description": "Сукупність засобів залізничного транспорту"
+		},
+		"loadingRestriction": {
+			"type": "string",
+			"title": "Обмеження полігону навантаження",
+			"description": "Обмеження полігону (станції, дирекції, залізниці) навантаження"
+		}
+	},
+	"required": [
+		"rollingStock"
+	]
+}

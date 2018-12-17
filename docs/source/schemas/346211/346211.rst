@@ -1,0 +1,20 @@
+
+
+======================
+Schema 346211
+======================
+
+Main page :ref:`schemas`
+
+
+
+
+version 001
+-----------
+
+.. jsonschema:: ../../../../openprocurement/schemas/dgf/schemas/346211/schema_001.json
+
+In jsonschema format:
+
+.. include:: ../../../../openprocurement/schemas/dgf/schemas/346211/schema_001.json
+    :code:
